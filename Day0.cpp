@@ -15,7 +15,6 @@ int main() {
     std::cout << "Enter second number: ";
     std::cin >> num2;
 
-    // Call the add function and display result
     int sum = add(num1, num2);
     std::cout << "The sum is: " << sum << std::endl;
 
