@@ -7,7 +7,7 @@ using namespace std;
 
 int main(){
 
-    /*
+    
     int age{21};
     int year{2005};
 
@@ -28,7 +28,7 @@ int main(){
     cout << "Your name is :" << name << " and your are " << age << "year old " << endl;
 
 
-    */
+    
 
     // Data with spaces
 
@@ -39,10 +39,13 @@ int main(){
     getline(cin, full_name);
     int age;
 
-    cin >> age;
-
+    cin >> age;    
+    cout << "Your name is :" << full_name << " and you are " << age << "year old " << endl;
     cout << "Your name is :" << full_name << " and your are " << age << "year old " << endl;
 
 
     return 0;
+    
+
+
 }
