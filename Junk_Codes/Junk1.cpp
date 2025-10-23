@@ -2,32 +2,25 @@
 
 using namespace std;
 
+void swap (int *a, int*b){
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+
+}
+
 int main(){
+    int x = 10;
+    int y = 20;
 
-  int n;
-    cin>>n;
-    int sum=0;
-    for(int i=0;i<n;i++){
-        int digit=n%10;
-        sum+=digit;
-        n=n/10;
-    }
-    cout<<sum;
+    cout << "Before swap: " << endl;
+    cout << "x = " << x << ", y = " << y << endl;
 
-int sum = 0;
-while(n > 0){
-    int d = n % 10;
-    sum += d;
-    n /= 10;
-}
+    swap(&x, &y);
 
+    cout << "After swap: " << endl;
+    cout << "x = " << x << ", y = " << y << endl;
 
-//Recursion one
-
-int digitsumrec(int n){
-    if(n == 0)return 0;
-    int s = digitsumrec(n/10);
-    return s+n%10;
-}
-
+    return 0;
 }
