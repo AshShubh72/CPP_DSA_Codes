@@ -40,7 +40,7 @@ int rollDice() {
 
 // Function to play one round
 void playRound(Player* head, int numPlayers) {
-    int rolls[100];  // assuming max 100 players
+    int rolls[100];  
     Player* temp = head;
     int highest = 0, i = 0;
 
