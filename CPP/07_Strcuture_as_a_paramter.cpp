@@ -13,7 +13,7 @@ void fun1(struct RECTANGLE r1)
 }
 void fun2(struct RECTANGLE &r1)
 {
-    (r1.length)++;
+     r1.length++;
     (r1.breath)++;
 }
 void fun3(struct RECTANGLE *r1)
