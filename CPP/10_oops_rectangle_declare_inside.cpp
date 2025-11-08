@@ -38,7 +38,7 @@ public:
     void setLength(int l)
     {
         length = l;
-    }
+    }  
 
     void setBreadth(int b)
     {
