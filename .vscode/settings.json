@@ -2,5 +2,18 @@
     "files.associations": {
         "iostream": "cpp"
     },
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "cpp": "powershell -Command \"cd $dir; g++ $fileName -o temp.exe; ./temp.exe; Start-Sleep -Seconds 1; Remove-Item temp.exe -Force\"",
+        "c": "powershell -Command \"cd $dir; gcc $fileName -o temp.exe; ./temp.exe; Start-Sleep -Seconds 1; Remove-Item temp.exe -Force\"",
+        "python": "python -u",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "javascript": "node"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "debug.onTaskErrors": "debugAnyway",
+    "git.ignoreMissingGitWarning": true,
+    "explorer.confirmDelete": false,
+    "redhat.telemetry.enabled": true
 }
