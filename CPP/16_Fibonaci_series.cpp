@@ -5,7 +5,7 @@ public:
     int fib(int n) {
         if (n <= 1)
             return n;
-        return fib(n - 1) + fib(n - 2);
+        return fib(n - 2) + fib(n - 1);
     }
 };
 
@@ -18,3 +18,12 @@ int main(){
     cout << a << '\n';
     return 0;
 }
+
+
+
+
+
+
+
+
+if (!(cin >> n)) return 0;
