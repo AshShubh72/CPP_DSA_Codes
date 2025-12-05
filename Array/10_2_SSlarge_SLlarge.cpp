@@ -1,0 +1,67 @@
+#include <iostream>
+#include <vector>
+#include <climits> // Required for INT_MAX
+
+using namespace std;
+
+// Function to find the second largest element
+int secondLargest(vector<int> &a, int n) {
+    int largest = a[0];
+    int slargest = -1; // Assuming non-negative numbers. Use INT_MIN for negatives.
+
+    for (int i = 1; i < n; i++) {
+        if (a[i] > largest) {
+            slargest = largest;
+            largest = a[i];
+        } 
+        else if (a[i] < largest && a[i] > slargest) {
+            slargest = a[i];
+        }
+    }
+    return slargest;
+}
+
+// Function to find the second smallest element
+int secondSmallest(vector<int> &a, int n) {
+    int smallest = a[0];
+    int ssmallest = INT_MAX;
+
+    for (int i = 1; i < n; i++) {
+        if (a[i] < smallest) {
+            ssmallest = smallest;
+            smallest = a[i];
+        } 
+        else if (a[i] != smallest && a[i] < ssmallest) {
+            ssmallest = a[i];
+        }
+    }
+    return ssmallest;
+}
+
+// Function to return both as a pair (Optional, useful for drivers)
+vector<int> getSecondOrderElements(int n, vector<int> a) {
+    int slargest = secondLargest(a, n);
+    int ssmallest = secondSmallest(a, n);
+    return {slargest, ssmallest};
+}
+
+int main() {
+    // Example usage
+    int n;
+    cout << "Enter number of elements: ";
+    cin >> n;
+
+    vector<int> a(n);
+    cout << "Enter elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+
+    int s_large = secondLargest(a, n);
+    int s_small = secondSmallest(a, n);
+
+    cout << "Second Largest: " << s_large << endl;
+    cout << "Second Smallest: " << s_small << endl;
+
+    return 0;
+}
